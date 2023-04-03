@@ -25,11 +25,6 @@ const IndexPage = () => {
     navigate('/shop');
   };
   
-  export function Head() {
-    return {
-      <title>Hello World</title>
-    } 
-  }
 
   return (
       <Layout disablePaddingBottom>

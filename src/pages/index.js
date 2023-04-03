@@ -147,10 +147,4 @@ const IndexPage = () => {
   );
 };
 
-export function Head() {
-  return (
-    <title>Hello World</title>
-  )
-}
-
 export default IndexPage;

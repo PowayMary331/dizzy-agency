@@ -9,7 +9,10 @@ import * as styles from './Layout.module.css';
 // CSS not modular here to provide global styles
 import './Globals.css';
 
+
+
 const Layout = ({ props, children, disablePaddingBottom = false }) => {
+  
   return (
     <>
       <Helmet>
@@ -26,15 +29,7 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
       </Helmet>
-      {"<!-- Google tag (gtag.js) -->"}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKMGVSMVGM"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
 
-        gtag('config', 'G-KKMGVSMVGM');
-      </script>
       <Header />
       <main
         className={`${styles.main} ${

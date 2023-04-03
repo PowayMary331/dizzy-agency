@@ -15,6 +15,7 @@ import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
 
 import * as styles from './index.module.css';
 import { Link, navigate } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
@@ -25,7 +26,19 @@ const IndexPage = () => {
   };
 
   return (
-    <Layout disablePaddingBottom>
+    <>
+    <Helmet>
+      {"<!-- Google tag (gtag.js) -->"}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKMGVSMVGM"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KKMGVSMVGM');
+      </script>
+    </Helmet>
+      <Layout disablePaddingBottom>
       {/* Hero Container */}
       <Hero
         maxWidth={'500px'}
@@ -141,6 +154,7 @@ const IndexPage = () => {
       </div>
       <AttributeGrid />
     </Layout>
+    </>
   );
 };
 

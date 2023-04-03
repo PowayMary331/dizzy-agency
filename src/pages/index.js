@@ -25,7 +25,8 @@ const IndexPage = () => {
     navigate('/shop');
   };
   
-
+  
+  
   return (
       <Layout disablePaddingBottom>
       {/* Hero Container */}
@@ -145,5 +146,11 @@ const IndexPage = () => {
     </Layout>
   );
 };
+
+export function Head() {
+  return (
+    <title>Hello World</title>
+  )
+}
 
 export default IndexPage;

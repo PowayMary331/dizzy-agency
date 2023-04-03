@@ -17,12 +17,6 @@ import * as styles from './index.module.css';
 import { Link, navigate } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-export function Head() {
-  return (
-    <title>Hello World</title>
-  )
-}
-
 const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
@@ -30,20 +24,14 @@ const IndexPage = () => {
   const goToShop = () => {
     navigate('/shop');
   };
+  
+  export function Head() {
+    return {
+      <title>Hello World</title>
+    } 
+  }
 
   return (
-    <>
-    <Helmet>
-      {"<!-- Google tag (gtag.js) -->"}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKMGVSMVGM"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
-
-        gtag('config', 'G-KKMGVSMVGM');
-      </script>
-    </Helmet>
       <Layout disablePaddingBottom>
       {/* Hero Container */}
       <Hero
@@ -160,7 +148,6 @@ const IndexPage = () => {
       </div>
       <AttributeGrid />
     </Layout>
-    </>
   );
 };
 

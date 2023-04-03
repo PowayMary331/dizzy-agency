@@ -17,6 +17,12 @@ import * as styles from './index.module.css';
 import { Link, navigate } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
+export function Head() {
+  return (
+    <title>Hello World</title>
+  )
+}
+
 const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
